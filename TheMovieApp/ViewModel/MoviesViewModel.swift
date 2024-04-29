@@ -19,9 +19,10 @@ class MoviesViewModel : ObservableObject {
             
             guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? "") else { return }
             let (data, _) = try await URLSession.shared.data(from: url)
-            let jsonDecoded = try JSONDecoder().decode(Movies.self, from: data)
+            let decodedJSON = try JSONDecoder().decode(Movies.self, from: data)
             
-            print(jsonDecoded.results)
+            print(decodedJSON.results)
+            self.dataMovies = decodedJSON.results
             
         } catch let failure as NSError {
             print("THE MOVIE DB API ERROR, ", failure.localizedDescription)
