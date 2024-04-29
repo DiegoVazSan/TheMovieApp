@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie: Codable {
+struct Movies: Codable {
     
     let page: Int
     let results: [Result]
@@ -18,7 +18,7 @@ struct Movie: Codable {
 struct Result: Codable, Identifiable {
     
     let id: Int
-    let poster_path: String
+    let poster_path: String?
     let original_title: String
     let overview: String
     
