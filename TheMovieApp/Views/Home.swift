@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Home: View {
     
+    @State var search : String
+    @State var buscar = false
+    
     var background : some View {
        let background = LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .top, endPoint: .bottom).ignoresSafeArea(.all)
         return background
@@ -19,9 +22,29 @@ struct Home: View {
             ZStack {
                 background
                 VStack {
-                    
-                    Text("Hola")
+                    TextField("Search", text: $search)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.top, 15)
+                        .padding(.bottom, 20)
+                        .onAppear{
+                            search = ""
+                        }
+                    Button(action: {
+                        buscar.toggle()
+                    }, label: {
+                        Text("Search")
+                            .font(.title2)
+                            .bold()
+                    })
+                    .buttonStyle(.bordered)
+                    .tint(.white)
+                    Spacer()
+                    .navigationDestination(isPresented: $buscar) {
+                        MoviesView(movie: search)
+                    }
                 }
+                .padding()
+                .navigationTitle("App Movie Search")
             }
         }
     }
