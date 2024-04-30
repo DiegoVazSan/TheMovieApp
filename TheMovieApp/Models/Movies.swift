@@ -23,3 +23,18 @@ struct MovieItem: Codable, Identifiable {
     let overview: String
     
 }
+
+struct VideoModel: Codable {
+    
+    let id: Int
+    let results: [VideoResults]
+    
+}
+
+// MARK: - Result
+struct VideoResults: Codable {
+    
+    let key: String
+    let type: String
+    
+}

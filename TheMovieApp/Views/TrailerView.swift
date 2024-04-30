@@ -12,7 +12,11 @@ struct TrailerView: View {
     @StateObject var moviesVM: MoviesViewModel
     
     var body: some View {
-        Text(moviesVM.title)
+        VStack {
+            Text(moviesVM.title)
+        }.task {
+            await moviesVM.fetchVideo()
+        }
     }
     
 }
