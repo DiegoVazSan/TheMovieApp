@@ -15,6 +15,7 @@
 		DB3EE4CB2BDC67F100B37662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3EE4CA2BDC67F100B37662 /* Assets.xcassets */; };
 		DB3EE4CE2BDC67F100B37662 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3EE4CD2BDC67F100B37662 /* Preview Assets.xcassets */; };
 		DB3EE4D62BDC683000B37662 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3EE4D52BDC683000B37662 /* Home.swift */; };
+		DBEEB1C52BE181FF002535E6 /* TrailerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEB1C42BE181FF002535E6 /* TrailerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		DB3EE4CA2BDC67F100B37662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3EE4CD2BDC67F100B37662 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB3EE4D52BDC683000B37662 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		DBEEB1C42BE181FF002535E6 /* TrailerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				DB3EE4D52BDC683000B37662 /* Home.swift */,
 				DB2724FF2BE026880069A9F0 /* MoviesView.swift */,
+				DBEEB1C42BE181FF002535E6 /* TrailerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2725032BE0394F0069A9F0 /* Movies.swift in Sources */,
+				DBEEB1C52BE181FF002535E6 /* TrailerView.swift in Sources */,
 				DB2725062BE059BB0069A9F0 /* MoviesViewModel.swift in Sources */,
 				DB3EE4C92BDC67F000B37662 /* ContentView.swift in Sources */,
 				DB2725002BE026880069A9F0 /* MoviesView.swift in Sources */,

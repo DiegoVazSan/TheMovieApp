@@ -10,12 +10,12 @@ import Foundation
 struct Movies: Codable {
     
     let page: Int
-    let results: [Result]
+    let results: [MovieItem]
     
 }
 
 // MARK: - Result
-struct Result: Codable, Identifiable {
+struct MovieItem: Codable, Identifiable {
     
     let id: Int
     let poster_path: String?

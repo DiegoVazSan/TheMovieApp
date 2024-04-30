@@ -10,7 +10,10 @@ import Foundation
 @MainActor
 class MoviesViewModel : ObservableObject {
     
-    @Published var dataMovies: [Result] = []
+    @Published var dataMovies: [MovieItem] = []
+    @Published var title = ""
+    @Published var movieID = 0
+    @Published var show = false 
     
     func fetch(movie: String) async {
         do {
@@ -28,5 +31,13 @@ class MoviesViewModel : ObservableObject {
             print("THE MOVIE DB API ERROR, ", failure.localizedDescription)
         }
     }
+    
+    
+    func sendItem(item: MovieItem) {
+        title = item.original_title
+        movieID = item.id
+        show.toggle()
+    }
+    
     
 }

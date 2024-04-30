@@ -19,12 +19,18 @@ struct MoviesView: View {
                 ForEach(moviesVM.dataMovies) { item in
                     CardView(poster: item.poster_path ?? "", title: item.original_title,
                              overView: item.overview) {
-                        print("Hello World !!")
+                        print("You did tap movie: \(item.original_title)")
+                        moviesVM.sendItem(item: item)
                     }
+                             .sheet(isPresented: $moviesVM.show, content: {
+                                 TrailerView(moviesVM: moviesVM)
+                             })
                 }
             }
             
-        }.task {
+        }
+        .navigationTitle(movie)
+        .task {
             await moviesVM.fetch(movie: movie)
         }
     }
